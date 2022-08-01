@@ -1,0 +1,18 @@
+# my global config
+global:
+  scrape_interval: 15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+  external_labels:
+    monitor: "lighthouse-monitor"
+
+scrape_configs:
+  - job_name: "prometheus"
+    scrape_interval: 15s
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  - job_name: "lighthouse-node"
+    scrape_interval: 5s
+    file_sd_configs:
+      - files:
+          - "/prometheus/targets/scrape-targets.json"

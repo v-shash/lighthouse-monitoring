@@ -1,0 +1,14 @@
+[
+    {
+        "labels": {
+            "job": "lighthouse"
+        },
+        "targets": []
+    },
+    {
+        "labels": {
+            "job": "node-exporter"
+        },
+        "targets": []
+    }
+]
